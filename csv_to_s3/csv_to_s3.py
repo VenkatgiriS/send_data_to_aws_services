@@ -52,9 +52,9 @@ def define_arguments():
     Defines the command-line arguments
     """
     parser = argparse.ArgumentParser(description="Upload CSV data to Amazon S3")
-    parser.add_argument("--bucket_name", "-bn", required=True, help="Name of the S3 bucket")
-    parser.add_argument("--object_key", "-ok", required=True, help="Name for the S3 object")
-    parser.add_argument("--data_url", "-du", required=True, help="URL of the remote CSV file")
+    parser.add_argument("csv-to-s3-project-venkatgiri", "-bn", required=True, help="Name of the S3 bucket")
+    parser.add_argument("s3://csv-to-s3-project-venkatgiri/csvtos3/csvdata.csv", "-ok", required=True, help="Name for the S3 object")
+    parser.add_argument("https://raw.githubusercontent.com/VenkatgiriS/send_data_to_aws_services/main/csv_to_s3/dirty_store_transactions.csv", "-du", required=True, help="URL of the remote CSV file")
     args = parser.parse_args()
 
     return args
